@@ -22,3 +22,9 @@ a {
   .family-pic img{
     width: 800px;
   }
+  body {
+    background-color: lightgray;
+  }
+  .notes-section img{
+    width: 500px;
+  }
