@@ -29,6 +29,11 @@ var links = [
         label: "Week 6 ToDo App",
         url: "toDoApp"
 
+    },
+    {
+        label: "Week 7 Notes",
+        url: "week7.html"
+
     }
 ];
 
@@ -42,7 +47,7 @@ for (var i = 0, l = links.length; i < l; ++i) {
     text = document.createTextNode(links[i].label);
 
     a.href = links[i].url;
-    a.setAttribute("class", "portfolioLinks");
+    a.setAttribute("class", 'dropdown-item');
     a.appendChild(text);
     li.appendChild(a);
     ul.appendChild(li);
