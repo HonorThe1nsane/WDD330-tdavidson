@@ -48,14 +48,42 @@ h2 {
 li {
   list-style-type: none;
 }
+
 #portfolioList {
   padding-left: 30px;
   padding-top: 90px;
 }
-h1 {
+
+h1,
+.description {
   text-align: center;
 
 }
-img{
-  display: block; margin-left: auto; margin-right: auto; width: 50%
+
+img, svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.myCanvas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: dotted 2px black;
+
+}
+
+.myCanvas2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: dotted 2px black;
+}
+
+.spin {
+  position: absolute;
+  top: 8px;
+  left: 55px;
 }
