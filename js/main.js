@@ -49,7 +49,16 @@ var links = [
     {
         label: "Star Wars API Excercise",
         url: "starWarsWeek8/teamW8.html"
+    },
+    {
+        label: "Hikes MVC Team Activity",
+        url: "teamActw05/hiking-complete.html"
+    },
+    {
+        label: "Tic Tac Toe",
+        url: "TicTacToe/teamWK3tictac.html"
     }
+
 ]
 
 
