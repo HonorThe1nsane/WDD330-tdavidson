@@ -34,8 +34,14 @@ var links = [
         label: "Week 7 Notes",
         url: "week7.html"
 
+    },
+    {
+        label: "Chuck Norris Excercise",
+        url: "chuckNorrisWeek7"
+
+
     }
-];
+]
 
 
 var ul = document.createElement("ul");
