@@ -55,6 +55,8 @@ function handleResultValidation() {
 
     if (roundWon) {
         statusDisplay.innerHTML = winningMessage();
+        alert (winningMessage());
+
         gameActive = false;
         return;
     }
@@ -62,6 +64,7 @@ function handleResultValidation() {
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
         statusDisplay.innerHTML = drawMessage();
+        alert (drawMessage());
         gameActive = false;
         return;
     }
