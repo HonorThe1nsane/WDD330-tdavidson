@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+
+
+
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: auto;
+
+  font-family: Montserrat, sans-serif;
+  color: yellow;
+
+
+}
+
+.wrapper {
+  position: relative;
+}
+
+.bg-image {
+  opacity: .25;
+}
+
+.contents {
+
+  position: absolute;
+  top: 3%;
+  left: 30%;
+
+
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 0em;
+  ;
+}
+
+h1 a,
+h4 {
+  color: #2E67F8;
+  margin: 0em;
+  text-align: center;
+
+}
+.goHome {
+  position: absolute;
+  top: 0px;
+  right: 160px;
+}
+
+h2 {
+  padding: 20px;
+
+}
+
+a {
+  color: #EB212E;
+}
+
+.hidden {
+  display: none;
+}
+
+#shiplist td {
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+div.listbox {
+  padding: 0px 20px;
+}
+
+#detailsbox {
+  flex: 1 0 15em;
+  padding: 1em;
+  text-align: center;
+  border: none;
+  margin-top: 10px;
+}
+
+#detailsbox dl {
+  border: 1px solid;
+  padding: 20px;
+  text-align: left;
+}
+
+#detailsbox dt {
+  font-weight: bold;
+  font-size: larger;
+  color: #2E67F8;
+
+}
+
+#shiplist {
+  /* display: flex; */
+  flex-flow: row wrap;
+  list-style-type: none;
+}
+
+#shiplist thead {
+  background-color: #141A26;
+}
+
+#shiplist tr {
+  border: 1px solid;
+  padding: 0.5em;
+  height: 44px;
+}
+
+#shiplist tr:nth-child(even) {
+  background-color: #141A26;
+  color: yellow;
+}
+
+#shiplist tr:nth-child(odd) {
+  color: white;
+}
+
+#shiplist tr:hover {
+  background-color: #594556;
+  text-decoration: underline;
+}

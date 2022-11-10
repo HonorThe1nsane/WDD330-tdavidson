@@ -40,6 +40,15 @@ var links = [
         url: "chuckNorrisWeek7"
 
 
+    },
+    {
+        label: "Week 8 Notes",
+        url: "week8.html"
+
+    },
+    {
+        label: "Star Wars API Excercise",
+        url: "starWarsWeek8/teamW8.html"
     }
 ]
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SW API Exercise</title>
+  <link rel="stylesheet" type="text/css" href="swstyles (1).css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <img src="starwars.webp" alt="starwars" class="bg-image" />
+    <div class="contents">
+      <h1>
+        <a href="https://swapi.dev/" target="_blank" rel="noreferrer">STAR WARS</a>
+      </h1>
+      <h4>API Excercise</h4>
+      <a class="goHome" href="../index.html">Go Back Home</a>
+
+      <h2>Ship List</h2>
+      <div class="listbox">
+        <table id="shiplist">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Length</th>
+              <th>Crew</th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+
+        <!--<button id="prev" href="#">&lt;-Prev</button> <button id="next" href="#">Next -&gt;</button> -->
+      </div>
+      <div id="detailsbox" class="hidden">
+        <dl>
+          <dt>Name:</dt>
+          <dd class="name" id="name"></dd>
+          <dt>Model:</dt>
+          <dd class="model" id="model"></dd>
+          <dt>Class:</dt>
+          <dd class="class" id="class"></dd>
+          <dt>*Movies:</dt>
+          <dd class="movies" id="movies"></dd>
+        </dl>
+      </div>
+
+      </main>
+    </div>
+    <script src="swapi-async (1).js"></script>
+  </div>
+
+</body>
+
+</html>
