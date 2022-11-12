@@ -57,7 +57,16 @@ var links = [
     {
         label: "Tic Tac Toe",
         url: "TicTacToe/teamWK3tictac.html"
+    },
+    {
+        label: "Week 9 Notes",
+        url: "week9.html"
+    },
+    {
+        label: "Week 9 Team Activity",
+        url: "js-30-drums/index-START.html"
     }
+
 
 ]
 
