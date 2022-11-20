@@ -28,12 +28,8 @@ async function everything() {
     // how did I know to look at quakes.features? I looked at the returned data from the fetch!
     const listHtml = quakes.features.map((quake) => {
         return `
-${quake.properties.title}
-${new Date(
-            quake.properties.time
-        )}
-`;
-    });
+${quake.properties.title}<br>
+${new Date(quake.properties.time)}<br>`;});
     listElement.innerHTML = listHtml.join("");
     // attach a listener to watch for a click on the quake. If it sees one then render out the details of the quake
     listElement.addEventListener("click", (event) => {
