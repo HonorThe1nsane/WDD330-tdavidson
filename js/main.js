@@ -65,6 +65,15 @@ var links = [
     {
         label: "Week 9 Team Activity",
         url: "js-30-drums/index-START.html"
+    },
+    {
+        label: "Week 10 Notes",
+        url: "week10.html"
+
+    },
+    {
+        label: "Week 10 Team Activity",
+        url: "teamActw10/index.html"
     }
 
 
