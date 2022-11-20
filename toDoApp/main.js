@@ -7,7 +7,7 @@ button.addEventListener('click', () => {
     newToDo.addCheck();
 
 });
-// newToDo.closeButton();
-// newToDo.hideClosedItem();
+newToDo.closeButton();
+newToDo.hideClosedItem();
 
 
