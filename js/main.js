@@ -74,6 +74,10 @@ var links = [
     {
         label: "Week 10 Team Activity",
         url: "teamActw10/index.html"
+    },
+    {
+        label: "Week 11 Team Activity",
+        url: "week11/json-server/client/week11.html"
     }
 
 
