@@ -4,24 +4,28 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>TO-DO App</title>
+    <title>Journal Note App</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='todo.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='todo.css'> -->
 
 </head>
 
 <body>
-    <div id="journalEntry" class="header">
-        <label id="date">Date:</label>
-        <p id="date"></p><br>
-        <input type="text" id="myInput" placeholder="Enter to do item...">
-        <span id="addBtn" class="addBtn">Add</span>
+    <div class='main'>
+        <div class='header'>
+            <h1>Journal Note App</h1>
+            <div id="journalEntry" class="header">
+                <label id="dateLabel">Date:</label>
+                <p id="date" onload="getDate()"></p><br>
+                <input type="text" id="myInput" placeholder="Enter to do item...">
+            
 
+            </div>
+        </div>
     </div>
 
     <ul id="myUL"></ul>
-
-    <script src="main.js" type="module"></script>
+    <script src="journal-model.js"></script>
     <a href="/index.html">Go Back Home</a>
 </body>
 

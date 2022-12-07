@@ -1,11 +1,12 @@
-function getDate() {
+window.onload = function getDate() {
     let displayDate = document.getElementById("date");
+    displayDate.innerText = new Date().toLocaleDateString();
+}
 
-    let date = displayDate.value;
-
-    return date;
-    // var date = Date.now();
-    // let displayDate= date.toString().split(' ').slice(0, 4).join(' ');
-
-    // return displayDate;
+// ============== Model ========================= 
+const contactsData = [{
+    'fname': 'Troy',
+    'lname': 'Davidson',
+    'date': displayDate,
+    'Chapter': ''
 }
