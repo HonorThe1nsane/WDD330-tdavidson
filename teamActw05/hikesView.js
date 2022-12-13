@@ -41,8 +41,7 @@ class HikesView {
     backButton.innerHTML = '&lt;- All Hikes';
     backButton.setAttribute('id', 'backBtn');
     const item = document.createElement('li');
-    item.innerHTML = ` 
-        
+    item.innerHTML = `
             <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
             <h2>${hike.name}</h2>
             <div>
@@ -61,7 +60,6 @@ class HikesView {
                 <h3>How to get there</h3>
                 <p>${hike.directions}</p>
             </div>
-        
         `;
     parent.innerHTML = '';
     item.insertBefore(backButton, item.childNodes[2]);

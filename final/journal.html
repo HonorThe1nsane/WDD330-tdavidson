@@ -11,21 +11,23 @@
 </head>
 
 <body>
-    <div class='main'>
-        <div class='header'>
-            <h1>Journal Note App</h1>
-            <div id="journalEntry" class="header">
-                <label id="dateLabel">Date:</label>
-                <p id="date" onload="getDate()"></p><br>
-                <input type="text" id="myInput" placeholder="Enter to do item...">
-            
-
+    <main>
+        <div class='main'>
+            <div class='header'>
+                <h1>Journal Note App</h1>
+                <!-- <ul id="journalEntries" class="journalStyles"></ul> -->
             </div>
         </div>
-    </div>
-
-    <ul id="myUL"></ul>
-    <script src="journal-model.js"></script>
+        <ul id="addJournalEntry"></ul>
+        <section id="entries"></section>
+    </main>
+    <script type="module">
+        import { JournalController } from './entries.js';
+        const myJournalController = new JournalController('addJournalEntry','entries');
+        window.addEventListener('load', () => {
+            myJournalController.showJournalList();
+        });
+    </script>
     <a href="/index.html">Go Back Home</a>
 </body>
 

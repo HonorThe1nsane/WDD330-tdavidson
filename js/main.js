@@ -78,6 +78,10 @@ var links = [
     {
         label: "Week 11 Team Activity",
         url: "week11/json-server/client/week11.html"
+    },
+    {
+        label: "Final Project",
+        url: "final/journal.html"
     }
 
 

@@ -3,10 +3,25 @@ window.onload = function getDate() {
     displayDate.innerText = new Date().toLocaleDateString();
 }
 
-// ============== Model ========================= 
-const contactsData = [{
+// ============== Model =========================
+const journalEntry = [{
     'fname': 'Troy',
     'lname': 'Davidson',
     'date': displayDate,
-    'Chapter': ''
+    'chapter': '',
+    'verse': '',
+    'verseText': ''
+
+}]
+
+class JournalModel {
+    getAllEntries() {
+        return JournalList;
+    }
+
+    getSingleJournal(chapter) {
+        return journalList.find(entry => entry.chapter === chapter);
+    }
 }
+
+export default JournalModel;
