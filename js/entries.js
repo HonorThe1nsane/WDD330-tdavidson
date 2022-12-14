@@ -1,6 +1,12 @@
-// Comments controller
+// The controller needs access to both the model and the view...so let's import them
 import JournalModel from './journal-model.js';
 import JournalView from './journal-view.js';
+
+
+
+
+
+// Comments controller
 export class JournalController {
     constructor(type, commentElementId) {
         this.type = type;
@@ -84,4 +90,10 @@ export class JournalController {
             console.log(error);
         }
     }
+
+
+
+
 }
+
+export default JournalController;

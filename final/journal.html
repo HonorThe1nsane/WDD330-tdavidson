@@ -6,7 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Journal Note App</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='todo.css'> -->
+    <link rel='stylesheet' media='screen' href='style.css'>
 
 </head>
 
@@ -22,7 +22,7 @@
         <section id="entries"></section>
     </main>
     <script type="module">
-        import { JournalController } from './entries.js';
+        import { JournalController } from './journal-controller.js';
         const myJournalController = new JournalController('addJournalEntry','entries');
         window.addEventListener('load', () => {
             myJournalController.showJournalList();

@@ -1,47 +1,80 @@
 
+import JournalModel from './journal-model.js';
 class JournalView {
-    renderJournalList(journalListElement, journalList) {
-        // I decided to let the controller handle where the list gets placed. So instead of getting the element here in the function, when I created the view I decided to pass the target element in.
-        // const journalListElement = document.getElementById('hikes');
+    constructor(type) {
+        this.type = type;
+        this.model = new JournalModel(this.type);
+        // this.controller = new JournalController(this.type);
 
-        journalListElement.innerHTML = '';
-        // the list of hikes doesn't exist here in the view either...so I've passed that in as well.
-        journalList.forEach(entry => {
-            // notice the call to 'this' below. 'this' is like adding './' at the beginning of a path. It helps the computer find things.
-            journalListElement.appendChild(this.renderOneHikeLight(hike));
+
+        // commentsView
+        this.entryUI = `
+    <div class="addEntry">
+    <h2>Add a Journal Entry</h2>
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" placeholder="your first name"></input><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" placeholder="your last name" /><br>
+    <label for="book">Book:</label><br>
+    <input type="text" id="book" placeholder="enter the book i.e. 1 Nephi" /><br>
+    <label for="chapter">Chapter:</label><br>
+    <input type="text" id="chapter" placeholder="enter the chapter" /><br>
+    <label for="verse">Verses:</label><br>
+    <input type="text" id="verse" placeholder="enter the verse(s) number" /><br>
+    <label for="notes">Notes/Impressions:</label><br>
+    <textarea id="notes" rows="4" cols="50" ></textarea><br>
+    <button id="entrySubmit"/>Add journal entry</button>
+    </div>
+    <h2>Existing Entries</h2>
+    <ul class="entries"></ul>`;
+    }
+    refreshPage() {
+        history.go();
+    }
+
+
+
+    // I only had one function for the view...so I chose not to use an object or class.
+    renderEntryList(element, entries) {
+        // clear out any comments that might be listed
+        element.innerHTML = '';
+        // add the new list of comments
+        entries.forEach(el => {
+            let item = document.createElement('li');
+            item.innerHTML = `${el.firstName} ${el.lastName} -- ${el.book} ${el.chapter}: ${el.verse}
+        <br>
+        ${el.notes}`;
+            let deleteButton = document.createElement('button')
+            deleteButton.className = 'delete';
+            deleteButton.id = 'delete';
+            deleteButton.value = el.id
+            deleteButton.textContent = 'Delete'
+            deleteButton.addEventListener('click', () => {
+                console.log(deleteButton.value);
+                this.model.removeFromLS(deleteButton.value);
+                this.refreshPage();
+            })
+            element.appendChild(item);
+            element.appendChild(deleteButton);
+            element.appendChild(document.createElement('br'));
         });
     }
-    renderOneJournalLight(entry) {
-        const item = document.createElement('li');
-        item.classList.add('light');
-        item.setAttribute('data-name', hike.name);
-        item.innerHTML = `
-        <h2>${entry.fname}${entry.lname}</h2>
-        <div>
-            <div>
-                <h3>${entry.date}</h3>
-                <p>${entry.chapter}${entry.verse}</p>
-            </div>
-        </div>`;
-        return item;
+    validateInput() {
+        let fname = document.getElementById('fname').value;
+        let lname = document.getElementById('lname').value;
+        let book = document.getElementById('book').value;
+        let chapter = document.getElementById('chapter').value;
+        let verse = document.getElementById('verse').value;
+        let notes = document.getElementById('notes').value;
+        if (fname == '' || lname == '' || book == '' || chapter == '' ||
+            verse == '' || notes == '') {
+            alert("All fields must be filled out")
+            return false;
+        }
+        return true;
+
     }
 
-    renderOneJournalFull(parent, entry) {
-        const backButton = document.createElement('button');
-        backButton.innerHTML = '&lt;- All Entries';
-        backButton.setAttribute('id', 'backBtn');
-        const item = document.createElement('li');
-        item.innerHTML = `
-            <h2>${entry.fname}${entry.lname}</h2>
-            <div>
-                <h3>${entry.date}</h3>
-                <p>${entry.chapter}${entry.verse}</p>
-            </div>
-        `;
-        parent.innerHTML = '';
-        item.insertBefore(backButton, item.childNodes[2]);
-        parent.appendChild(item);
-        return backButton;
-    }
 }
+
 export default JournalView;
