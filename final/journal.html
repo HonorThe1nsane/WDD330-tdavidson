@@ -11,24 +11,28 @@
 </head>
 
 <body>
-    <main>
-        <div class='main'>
-            <div class='header'>
-                <h1>Journal Note App</h1>
-                <!-- <ul id="journalEntries" class="journalStyles"></ul> -->
-            </div>
+    <div class="wrapper"></div>
+    <img src='.\images\christimage.jpg' alt='worlds without end' class="bg-image" />
+    <div class='contents'>
+        <div class='header'>
+            <h1>Journal Note App</h1>
+            <!-- <ul id="journalEntries" class="journalStyles"></ul> -->
         </div>
-        <ul id="addJournalEntry"></ul>
-        <section id="entries"></section>
-    </main>
+    </div>
+    <ul id="addJournalEntry"></ul>
+    <section id="entries"></section>
+
+
+
     <script type="module">
         import { JournalController } from './journal-controller.js';
-        const myJournalController = new JournalController('addJournalEntry','entries');
+        const myJournalController = new JournalController('addJournalEntry', 'entries');
         window.addEventListener('load', () => {
             myJournalController.showJournalList();
         });
     </script>
-    <a href="/index.html">Go Back Home</a>
+    <a class='goHome' href="/index.html">Go Back Home</a>
+    </div>
 </body>
 
 </html>

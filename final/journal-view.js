@@ -9,8 +9,8 @@ class JournalView {
 
         // commentsView
         this.entryUI = `
+        <h2>Add a Journal Entry</h2>
     <div class="addEntry">
-    <h2>Add a Journal Entry</h2>
     <label for="fname">First Name:</label><br>
     <input type="text" id="fname" placeholder="your first name"></input><br>
     <label for="lname">Last Name:</label><br>
@@ -25,7 +25,7 @@ class JournalView {
     <textarea id="notes" rows="4" cols="50" ></textarea><br>
     <button id="entrySubmit"/>Add journal entry</button>
     </div>
-    <h2>Existing Entries</h2>
+    <h3>Existing Entries</h2>
     <ul class="entries"></ul>`;
     }
     refreshPage() {
